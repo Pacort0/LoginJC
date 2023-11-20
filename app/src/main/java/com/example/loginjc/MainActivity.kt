@@ -22,7 +22,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -67,7 +66,7 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
-fun LoginView(modifier: Modifier = Modifier, navController: NavHostController) {
+fun LoginView(modifier: Modifier = Modifier) {
     var usuario by rememberSaveable { mutableStateOf("") }
     Column (
         verticalArrangement = Arrangement.Center,
@@ -86,7 +85,6 @@ fun LoginView(modifier: Modifier = Modifier, navController: NavHostController) {
                 PasswordTextField()
             }
         }
-        LoginButton(usuario = usuario, navController = navController)
     }
 }
 
@@ -104,7 +102,7 @@ fun UsuarioTextField(value: String, onInputChanged: (String) -> Unit) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PasswordTextField() {
-    var password by remember { mutableStateOf("") }
+    var password by rememberSaveable { mutableStateOf("") }
     OutlinedTextField(
         value = password,
         onValueChange = { password = it },

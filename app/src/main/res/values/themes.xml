@@ -2,4 +2,8 @@
 <resources>
 
     <style name="Theme.LoginJC" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.PruebaNavigation" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.RockPaperScissorsJC" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>

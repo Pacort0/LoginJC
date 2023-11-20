@@ -15,4 +15,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "LoginJC"
 include(":app")
+include(":app")
+include(":app")
+include(":app")
  
